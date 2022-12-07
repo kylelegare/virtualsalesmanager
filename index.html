@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Virtual Sales Manager</title>
+    <style>
+      /* Add some styling to the page */
+      body {
+        font-family: sans-serif;
+        text-align: center;
+      }
+      button {
+        /* Style the button */
+        font-size: 1.2em;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #phrase {
+        /* Style the phrase that is printed above the button */
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="phrase"></div>
+    <button onclick="printPhrase()">Get Advice</button>
+    <script>
+      // An array of phrases to be printed above the button
+      const phrases = [
+        "Have you updated Salesforce yet?",
+        "No news is bad news",
+        "Are those notes in Salesforce yet?",
+        "Big money moves slow",
+        "Do you have a handle on your business?",
+        "What’s the next step?",
+        "What’s the compelling event?",
+	"I don’t like getting blindsided",
+        "Don't be an order taker!",
+	"We really need this business",
+	"Where's your pipeline?",
+	"Bring your “A” game",
+	"This is low hanging fruit",
+	"Are you multi-threaded on this",
+	"You need to cast a wider net",
+	"Is this buyer qualified",
+	"Let's circle back around to this",
+	"A bird in the hand is worth two in the bush",
+	"Where are we at with those leads I gave you"
+	
+	
+      ];
+
+      function printPhrase() {
+        // Get a random phrase from the array of phrases
+        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+
+        // Get the element with the id "phrase"
+        const phraseElement = document.getElementById("phrase");
+
+        // Set the text of the element to the randomly selected phrase
+        phraseElement.textContent = phrase;
+      }
+    </script>
+  </body>
+</html>
